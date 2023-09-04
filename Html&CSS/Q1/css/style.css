@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-circle{
+    height: 300px;
+    width: 300px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second-circle{
+    height: 250px;
+    width: 250px;
+    background-color: #ffa500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.third-circle{
+    height: 200px;
+    width: 200px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.four-circle{
+    height: 150px;
+    width: 150px;
+    background-color: #008000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fifth-circle{
+    height: 100px;
+    width: 100px;
+    background-color: #0000ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sixth-circle{
+    height: 50px;
+    width: 50px;
+    background-color: #800080;
+    border-radius: 50%;
+}
