@@ -568,6 +568,42 @@ video {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[50\] {
+  top: 50;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.left-\[\] {
+  left: ;
+}
+
+.left-\[20px\] {
+  left: 20px;
+}
+
+.right-\[20px\] {
+  right: 20px;
+}
+
+.right-\[10px\] {
+  right: 10px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -599,6 +635,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .block {
@@ -871,10 +911,6 @@ video {
   outline-offset: 2px;
 }
 
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .btn {
   cursor: pointer;
   border-radius: 9999px;
@@ -969,6 +1005,14 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:absolute {
+    position: absolute;
+  }
+
+  .sm\:relative {
+    position: relative;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
@@ -977,15 +1021,37 @@ video {
     font-size: 3rem;
     line-height: 1;
   }
+
+  @media (min-width: 768px) {
+    .sm\:md\:flex-row {
+      flex-direction: row;
+    }
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
   .md\:sticky {
     position: sticky;
   }
 
   .md\:top-0 {
     top: 0px;
+  }
+
+  .md\:top-\[\] {
+    top: ;
+  }
+
+  .md\:top-\[100\%\] {
+    top: 100%;
+  }
+
+  .md\:right-0 {
+    right: 0px;
   }
 
   .md\:z-10 {
