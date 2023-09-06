@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply rounded-full py-3 px-6 text-secondary-default text-sm font-bold cursor-pointer bg-gradient-to-r from-primary-limegreen to-primary-cyan;
+}
