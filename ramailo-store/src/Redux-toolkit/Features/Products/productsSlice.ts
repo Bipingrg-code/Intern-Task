@@ -1,21 +1,24 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  createSlice,
+  createAsyncThunk,
+} from "@reduxjs/toolkit";
+
 import axios from "axios";
 
 const base_URL = import.meta.env.VITE_APP_API_URL;
 
 interface Product {
-    limit: number,
-    skip: number,
-    total: number,
-    products: any[],
-  }
-  
-  interface ProductState {
-    loading: boolean;
-    products: Product | null;
-    error: string | null;
-  }
-  
+  limit: number;
+  skip: number;
+  total: number;
+  products: any[];
+}
+
+interface ProductState {
+  loading: boolean;
+  products: Product | null;
+  error: string | null;
+}
 
 //fetching Products
 export const fetchProducts = createAsyncThunk("products", async () => {
