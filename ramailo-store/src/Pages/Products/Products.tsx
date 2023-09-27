@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../Redux-toolkit/Features/Products/productsSlice";
 import { useEffect } from "react";
 import { RootState } from "../../App/store";
+import { Link } from "react-router-dom";
 
 export const Products: React.FC = () => {
   const dispatch = useDispatch();
@@ -30,8 +31,9 @@ export const Products: React.FC = () => {
         </h2>
         <div className="flex flex-wrap -m-4 cursor-pointer">
           {products?.products.map((product) => (
-            <div
+            <Link
               key={product.id}
+              to={`/products/${product.id}`} // Define the route to display single product details
               className="lg:w-1/4 md:w-1/2 p-4 w-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               <a className="block relative h-48 rounded overflow-hidden">
@@ -50,8 +52,28 @@ export const Products: React.FC = () => {
                 </h2>
                 <p className="mt-1">${product.price}</p>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-l"
+            onClick={() => {
+              /* Handle previous page */
+            }}
+            // disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-r"
+            onClick={() => {
+              /* Handle next page */
+            }}
+            // disabled={endIndex >= products.length}
+          >
+            Next
+          </button>
         </div>
       </div>
     </section>

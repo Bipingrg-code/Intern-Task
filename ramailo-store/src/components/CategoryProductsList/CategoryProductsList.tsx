@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 const base_Url = import.meta.env.VITE_APP_API_URL;
@@ -35,16 +35,20 @@ export const CategoryProductList: React.FC = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
-  console.log(products);
+  //console.log(products);
   return (
     <section className="bg-gray-100 text-gray-600 body-font">
       <div className="container px-5 py-20 mx-auto">
-        <h2 className="text-2xl text-blue-400 tracking-widest font-medium title-font mb-6">
-          Popular {category}
+        <h2 className="text-2xl text-blue-400 tracking-widest font-medium title-font mb-6 flex gap-2">
+          <Link to="/">
+            <span className="underline">Products</span>
+          </Link>
+          {category}
         </h2>
         <div className="flex flex-wrap -m-4 cursor-pointer">
           {products?.products.map((product: any) => (
-            <div
+            <Link
+              to={`/products/${product.id}`} // Add a dynamic product URL here
               key={product.id}
               className="lg:w-1/4 md:w-1/2 p-4 w-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
             >
@@ -64,7 +68,7 @@ export const CategoryProductList: React.FC = () => {
                 </h2>
                 <p className="mt-1">${product.price}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
