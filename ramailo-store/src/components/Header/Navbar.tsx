@@ -10,14 +10,27 @@ const Navbar: React.FC = () => {
           </span>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base cursor-pointer justify-center">
-          <a className="mr-5 hover:text-blue-500 hover:font-semibold">Home</a>
-          <a className="mr-5 hover:text-blue-500 hover:font-semibold">About</a>
-          <a className="mr-5 hover:text-blue-500 hover:font-semibold">
+          <Link to="/" className="mr-5 hover:text-blue-500 hover:font-semibold">
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="mr-5 hover:text-blue-500 hover:font-semibold"
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            className="mr-5 hover:text-blue-500 hover:font-semibold"
+          >
             Contact
-          </a>
-          <a className="mr-5 hover:text-blue-500 hover:font-semibold">
+          </Link>
+          <Link
+            to="/products"
+            className="mr-5 hover:text-blue-500 hover:font-semibold"
+          >
             Product
-          </a>
+          </Link>
         </nav>
         <AiOutlineShoppingCart size={32} className="cursor-pointer" />
       </div>

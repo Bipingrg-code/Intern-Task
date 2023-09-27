@@ -13,7 +13,7 @@ const CategoryProducts: React.FC = () => {
     dispatch(fetchedCategoryProducts() as any);
   }, []);
   if (loading) {
-    return <div>Loading...</div>;
+    <h2 className="text-center text-2xl">Loading..!</h2>;;
   }
   if (!error && !loading) {
     return <h2>Error: {error}</h2>;

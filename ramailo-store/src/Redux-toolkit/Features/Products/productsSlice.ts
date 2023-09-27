@@ -11,7 +11,7 @@ interface Product {
   limit: number;
   skip: number;
   total: number;
-  products: any[];
+  products: any;
 }
 
 interface ProductState {
