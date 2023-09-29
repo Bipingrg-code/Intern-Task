@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import CategoryProductList from "./components/CategoryProductsList/CategoryProductsList";
 import SingleProducts from "./components/SingleProducts/SingleProducts";
+import CartPage from "./components/Cart/CartPage";
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         />
         <Route path="/products/:productId" element={<SingleProducts />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/cart" element={<CartPage />} />
       </Routes>
       <Footer />
     </div>
