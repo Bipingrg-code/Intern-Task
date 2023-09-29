@@ -1,5 +1,5 @@
-import CategoryProducts from "./CategoryProducts";
-import Hero from "./Hero";
-import Products from "./Products";
+import CategoryProducts from "./CategoryProducts/CategoryProducts";
+import Home from "../Pages/Home/Home";
+import Products from "./Products/Products";
 
-export { CategoryProducts, Hero, Products };
+export { CategoryProducts, Home, Products };
