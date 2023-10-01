@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 import { Routes, Route } from "react-router-dom";
 import CategoryProductList from "./components/CategoryProductsList/CategoryProductsList";
 import SingleProducts from "./components/SingleProducts/SingleProducts";
-import CartPage from "./components/Cart/CartPage";
+import CartPage from "./components/CartComp/CartPage";
 
 export const App = () => {
   return (

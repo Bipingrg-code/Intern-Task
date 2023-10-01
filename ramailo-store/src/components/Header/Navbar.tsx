@@ -5,7 +5,6 @@ import { RootState } from "../../App/store";
 
 const Navbar: React.FC = () => {
   const { total } = useSelector((state: RootState) => state.cart);
-  console.log(total);
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
